@@ -1,0 +1,8 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=476
+
+Yet another colorscheme for vim. It uses dark dark blue background in gui and "transparent" in console (looks nice when vim is started from transparent aterm).
+
+Screenshots:
+
+GVim - http://people.altlinux.ru/~raorn/gvim-transparent.png (25K)
+Vim (in transparent aterm) - http://people.altlinux.ru/~raorn/vim-transparent.png (245K)
