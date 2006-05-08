@@ -1,11 +1,11 @@
 " Vim color file
 " Maintainer:   Sir Raorn <raorn@altlinux.ru>
-" Last Change:  Dec, 20 2005
-" URL:		http://people.altlinux.ru/~raorn/
+" Last Change:  Apr, 08 2006
+" URL:		http://people.altlinux.ru/~raorn/transparent.vim
 
 " This color scheme uses "transparent" background (dark dark blue in gvim)
 " Looks really nice when vim (console) started in transparent aterm
-" But gvim is good either
+" But gvim looks good too
 set background=dark
 
 " First remove all existing highlighting.
@@ -19,6 +19,10 @@ let g:colors_name="transparent"
 hi Normal			ctermfg=Gray	ctermbg=NONE				guifg=Gray	guibg=#00002A
 
 hi Cursor										guifg=Black	guibg=Green
+if version >= 700
+  hi CursorColumn cterm=reverse										guibg=Gray40
+  hi CursorLine	cterm=underline										guibg=Gray40
+endif
 "hi CursorIM			NONE							guifg=Black	guibg=Purple
 hi Directory			ctermfg=White						guifg=White
 hi DiffAdd			ctermfg=White	ctermbg=DarkCyan			guifg=White	guibg=DarkCyan
@@ -31,26 +35,34 @@ hi Folded	cterm=bold	ctermfg=Cyan	ctermbg=NONE		gui=bold	guifg=Cyan	guibg=DarkCy
 hi FoldColumn			ctermfg=Green	ctermbg=NONE				guifg=Green	guibg=#00002A
 hi IncSearch			ctermfg=White	ctermbg=Black				guifg=White	guibg=Black
 hi LineNr			ctermfg=Yellow						guifg=DarkCyan
+if version >= 700
+  hi MatchParen	cterm=bold,underline		ctermbg=NONE		gui=bold,underline		guibg=NONE
+endif
 hi ModeMsg	cterm=bold	ctermfg=White				gui=bold	guifg=White
 hi MoreMsg	cterm=bold	ctermfg=White				gui=bold	guifg=White
 hi NonText			ctermfg=NONE						guifg=NONE
 if version >= 700
-hi Pmenu			ctermfg=Black	ctermbg=Cyan				guifg=Black	guibg=Cyan
-hi PmenuSel			ctermfg=Black	ctermbg=Grey				guifg=Black	guibg=Grey
-hi PmenuSbar			ctermfg=Black	ctermbg=Grey				guifg=Black	guibg=Grey
-hi PmenuThumb			cterm=reverse				gui=reverse
+  hi Pmenu			ctermfg=Black	ctermbg=Cyan				guifg=Black	guibg=Cyan
+  hi PmenuSel			ctermfg=Black	ctermbg=Grey				guifg=Black	guibg=Grey
+  hi PmenuSbar			ctermfg=Black	ctermbg=Grey				guifg=Black	guibg=Grey
+  hi PmenuThumb			cterm=reverse				gui=reverse
 endif
 hi Question			ctermfg=Green						guifg=Green
 hi Search	cterm=reverse	ctermfg=fg	ctermbg=NONE		gui=reverse	guifg=fg	guibg=bg
 hi SpecialKey			ctermfg=LightRed					guifg=Red
 if version >= 700
-hi SpellBad					ctermbg=Red		gui=undercurl					guisp=Red
-hi SpellCap					ctermbg=Blue		gui=undercurl					guisp=Blue
-hi SpellRare					ctermbg=Magenta		gui=undercurl					guisp=Magenta
-hi SpellLocal					ctermbg=Cyan		gui=undercurl					guisp=Cyan
+  hi SpellBad					ctermbg=Red		gui=undercurl					guisp=Red
+  hi SpellCap					ctermbg=Blue		gui=undercurl					guisp=Blue
+  hi SpellRare					ctermbg=Magenta		gui=undercurl					guisp=Magenta
+  hi SpellLocal					ctermbg=Cyan		gui=undercurl					guisp=Cyan
 endif
 hi StatusLine	cterm=bold,reverse ctermfg=White ctermbg=Black		gui=bold,reverse guifg=White	guibg=Black
 hi StatusLineNC	cterm=reverse	ctermfg=Gray	ctermbg=Black		gui=reverse	guifg=DarkGray	guibg=Black
+if version >= 700
+  hi TabLine	cterm=underline	ctermfg=Gray				gui=underline	guifg=Black	guibg=DarkGray
+  hi TabLineSel	cterm=bold,underline ctermfg=White			gui=bold	guifg=White
+  hi TabLineFill cterm=underline ctermfg=Gray				gui=underline	guifg=Black	guibg=DarkGray
+endif
 hi Title			ctermfg=LightGreen			gui=bold	guifg=Green
 hi Visual	cterm=inverse	ctermfg=White	ctermbg=DarkGray	gui=inverse	guifg=DarkGray	guibg=Black
 hi VisualNOS	cterm=bold,underline					gui=bold,underline
@@ -106,4 +118,3 @@ hi Ignore			ctermfg=DarkBlue					guifg=DarkBlue
 hi Error			ctermfg=White	ctermbg=DarkRed				guifg=White	guibg=DarkRed
 
 hi Todo				ctermfg=Black	ctermbg=Gray				guifg=Black	guibg=Gray
-
