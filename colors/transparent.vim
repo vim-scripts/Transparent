@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:   Sir Raorn <raorn@altlinux.ru>
-" Last Change:  Apr, 08 2006
+" Last Change:  Apr, 10 2006
 " URL:		http://people.altlinux.ru/~raorn/transparent.vim
 
 " This color scheme uses "transparent" background (dark dark blue in gvim)
@@ -45,7 +45,7 @@ if version >= 700
   hi Pmenu			ctermfg=Black	ctermbg=Cyan				guifg=Black	guibg=Cyan
   hi PmenuSel			ctermfg=Black	ctermbg=Grey				guifg=Black	guibg=Grey
   hi PmenuSbar			ctermfg=Black	ctermbg=Grey				guifg=Black	guibg=Grey
-  hi PmenuThumb			cterm=reverse				gui=reverse
+  hi PmenuThumb	cterm=reverse						gui=reverse
 endif
 hi Question			ctermfg=Green						guifg=Green
 hi Search	cterm=reverse	ctermfg=fg	ctermbg=NONE		gui=reverse	guifg=fg	guibg=bg
@@ -93,7 +93,7 @@ hi Operator			ctermfg=Green						guifg=Green
 "hi Keyword
 hi Exception			ctermfg=Black	ctermbg=DarkRed				guifg=Black	guibg=DarkRed
 
-hi PreProc			ctermfg=DarkGreen					guifg=DarkGreen
+hi PreProc			ctermfg=DarkGreen					guifg=#00aa00
 "hi Include
 "hi Define
 "hi Macro
